@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="./node_modules/@jsplumb-components/schema/jsplumb.components.schema.css">
+    <link rel="stylesheet" href="./node_modules/@jsplumb-components/schema/jsplumb.components.schema.theme.default.css">
+    <link rel="stylesheet" href="../app.css">
+    <title>Schema Builder Demonstration</title>
+</head>
+
+<body>
+
+<div id="main">
+    <div id="container"></div>
+
+    <div id="rhs">
+        <div id="undoredo">
+            <button data-action="undo">Undo</button>
+            <button data-action="redo">Redo</button>
+        </div>
+        <div id="palette" class="jtk-schema-palette">
+            <div data-type="table" class="jtk-schema-palette-item">Table</div>
+            <div data-type="view" class="jtk-schema-palette-item">View</div>
+        </div>
+        <div id="inspector"></div>
+    </div>
+</div>
+
+<script src="./_build/demo.umd.js"></script>
+
+</body>
+</html>

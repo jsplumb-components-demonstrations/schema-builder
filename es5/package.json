@@ -1,0 +1,15 @@
+{
+  "name": "schema-builder",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsplumb-components-demonstrations/schema-builder.git"
+  },
+  "author": "jsPlumb <hello@jsplumbtoolkit.com> (https://jsplumbtoolkit.com)",
+  "license": "ISC",
+  "homepage": "https://components.jsplumbtoolkit.com",
+  "dependencies": {
+    "@jsplumb-components/schema": "^1.0.0"
+  }
+}

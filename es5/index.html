@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./node_modules/@jsplumb-components/schema/jsplumb.components.schema.css">
+        <link rel="stylesheet" href="./node_modules/@jsplumb-components/schema/jsplumb.components.schema.theme.default.css">
+        <link rel="stylesheet" href="../app.css">
+        <script src="./node_modules/@jsplumb-components/schema/jsplumb.components.schema.umd.js"></script>
+        <title>Schema Builder Demonstration</title>
+    </head>
+
+    <body>
+
+    <div id="main">
+        <div id="container"></div>
+
+        <div id="rhs">
+            <div id="undoredo">
+                <button data-action="undo">Undo</button>
+                <button data-action="redo">Redo</button>
+            </div>
+            <div id="palette" class="jtk-schema-palette">
+                <div data-type="table" class="jtk-schema-palette-item">Table</div>
+                <div data-type="view" class="jtk-schema-palette-item">View</div>
+            </div>
+            <div id="inspector"></div>
+        </div>
+    </div>
+
+    <script>
+
+        var schema = jsPlumbSchemaBuilder.newInstance({
+            container:document.getElementById("container"),
+            palette:{
+                container:document.getElementById("palette")
+            },
+            inspector:{
+                container:document.getElementById("inspector")
+            },
+            undoRedo:{
+                undo:document.querySelector("[data-action='undo']"),
+                redo:document.querySelector("[data-action='redo']")
+            }
+        })
+
+        schema.loadUrl("../schema-1.json")
+    </script>
+    </body>
+</html>
